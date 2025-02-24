@@ -31,7 +31,6 @@ doc_splits = text_splitter.split_documents(docs_list)
 
 
 # Embed and Store
-
 vectorstore = Chroma.from_documents(
     documents=doc_splits,
     collection_name="rag-advanced",
