@@ -1,7 +1,8 @@
 from dotenv import load_dotenv
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.vectorstores import Chroma
-from langchain_community.document_loaders import WebBaseLoader
+
+# from langchain_community.document_loaders import WebBaseLoader
 from langchain_openai import OpenAIEmbeddings
 from langchain_community.document_loaders import PyPDFLoader
 
@@ -9,7 +10,7 @@ load_dotenv()
 
 # Data
 pdf_files = [
-    "./assets/vectores.pdf",
+    "./assets/el_gato_negro.pdf",
 ]
 
 # Loading the documents
@@ -30,7 +31,7 @@ text_splitter = RecursiveCharacterTextSplitter.from_tiktoken_encoder(
 doc_splits = text_splitter.split_documents(docs_list)
 
 
-# Embed and Store
+# Embed and Store, only need to store once, so comment this code once you have uploaded your documents in the vectore store
 vectorstore = Chroma.from_documents(
     documents=doc_splits,
     collection_name="rag-advanced",

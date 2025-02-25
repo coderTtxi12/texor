@@ -4,8 +4,6 @@ from langchain_openai import ChatOpenAI
 
 llm = ChatOpenAI(temperature=0)
 
-print("Using model:", llm.model_name)  # Log the model name
-
 prompt = hub.pull("rlm/rag-prompt")
 
 

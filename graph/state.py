@@ -9,8 +9,10 @@ class GraphState(TypedDict):
         question: question
         generation: LLM generation
         documents: list of documents
+        results: whether there are relevant documents to the question
     """
 
     question: str
     generation: str
     documents: List[str]
+    results: bool
