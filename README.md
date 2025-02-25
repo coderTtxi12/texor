@@ -123,3 +123,5 @@ Contributions are welcome! Feel free to open issues or submit pull requests if y
 
 ## License
 MIT License
+
+Texor: Deep document search
